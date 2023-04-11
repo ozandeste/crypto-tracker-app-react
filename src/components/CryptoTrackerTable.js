@@ -21,8 +21,24 @@ export default function CryptoTrackerTable() {
 
   // Filter crypto list while the input is changing
   useEffect(() => {
+      const filterCryptos = async (nameOrSymbol) => {
+        const list = cryptoList;
+        const loweredNameOrSymbol = nameOrSymbol.toLowerCase();
+
+        return new Promise((resolve, reject) =>
+          resolve(
+            setFilteredCryptos(
+              list.filter(
+                (crypto) =>
+                  crypto?.name?.toLowerCase().includes(loweredNameOrSymbol) |
+                  crypto?.symbol?.toLowerCase().includes(loweredNameOrSymbol)
+              )
+            )
+          )
+        );
+    };
     filterCryptos(searchCryptos).then(() => console.log('Veriler filtrelendi.'));
-  }, [searchCryptos]);
+  }, [searchCryptos, cryptoList]);
 
   // Responsive table with Ref hook
   useEffect(() => {
@@ -31,23 +47,6 @@ export default function CryptoTrackerTable() {
     };
     windowRef.current = window.addEventListener('resize', responsiveTable);
   }, []);
-
-  const filterCryptos = async (nameOrSymbol) => {
-    const list = cryptoList;
-    const loweredNameOrSymbol = nameOrSymbol.toLowerCase();
-
-    return new Promise((resolve, reject) =>
-      resolve(
-        setFilteredCryptos(
-          list.filter(
-            (crypto) =>
-              crypto?.name?.toLowerCase().includes(loweredNameOrSymbol) |
-              crypto?.symbol?.toLowerCase().includes(loweredNameOrSymbol)
-          )
-        )
-      )
-    );
-  };
 
   const renderRow = (crypto) => (
     <TableRow key={crypto.name} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
