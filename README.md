@@ -8,6 +8,7 @@ Bu projeyi React ile geliştirdim.
 
 - Framework: React
 - State yönetimi: Redux ve Hooks
+- API: CoinGecko
 - CSS: Material UI, Inline CSS, Modül CSS ve reset CSS
 - UI Kit: Material UI
 - Icons: Material UI Icons
