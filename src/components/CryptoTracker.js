@@ -17,21 +17,18 @@ const CryptoTracker = () => {
   const inputRef = useRef(); // refers to the container which contains input element
 
   useEffect(() => {
-    fetchCryptos().then(() => console.log("Veriler çekildi..."));
-    eventListeners(); // calls the eventListeners
-  }, []);
-
-  const fetchCryptos = async () => {
+    const fetchCryptos = async () => {
     const { data } = await axios.get(
       'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
     );
     dispatch(setCryptos(data));
-  };
-
-  const eventListeners = () => {
+    };
+    fetchCryptos().then(() => console.log("Veriler çekildi..."));
+    
     const searchInput = inputRef.current.firstElementChild.firstElementChild;
     searchInput.addEventListener("keyup", (e) => dispatch(searchCrypto(e.target.value))) // when the input changes, it updates the searchCrypto state
-  }
+  }, []);
+
 
   return (
     <div className={styles.ct__app}>
