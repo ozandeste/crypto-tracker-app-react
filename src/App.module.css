@@ -1,0 +1,38 @@
+.ct {
+  display: grid;
+  place-items: center;
+  width: 100dvw;
+  min-height: 100dvh;
+  background-color: var(--neutral-color-100);
+  color: var(--neutral-color-100);
+  font-family: var(--ff);
+}
+
+.ct__app {
+  background-color: var(--accent-color);
+  border-radius: 0.375em;
+  box-shadow: 0px 8px 16px rgb(192, 192, 192), 0 0 4px rgba(0, 0, 0, 0.675);
+}
+
+@media only screen and (max-width: 768px) {
+  .ct {display: block;}
+  .ct__app {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
+.ct__app-header {
+  border-radius: 4px 4px 0 0;
+  color: white !important;
+}
+
+.ct__app-header_logo {
+  position: relative;
+  font-family: var(-ff);
+}
+
+.ct__app-header_logo > h1::first-letter {color: var(--accent-color);}
+
+.ct__app-header_logo > h1 {color: var(--secondary-color);}
