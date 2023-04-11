@@ -42,7 +42,7 @@ Bu projeyi React ile geliştirdim.
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── App.module.css</br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── index.css</br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── index.js</br>
-</br>
 
-### Projeyi kurmak ve çalıştırmak için,
+
+### Projeyi kurmak ve çalıştırmak için
 bilgisayarda öncelikle npm paket yöneticisini yükledikten sonra, cmd ile projenin bulunduğu dizin üzerinde 'npm install' ve 'npm start' komutlarını çalıştırdıktan sonra uygulama açılacaktır.
