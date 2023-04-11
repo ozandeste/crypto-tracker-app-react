@@ -14,7 +14,7 @@ Bu projeyi React ile geliştirdim.
 - Icons: Material UI Icons
 - Kullanılan paketler: Redux, Material UI ve Axios
 
-Uygulamanın canlı versiyonu: [Live Version](https://crypto-tracker-web-app1.netlify.app/ "Crypto Tracker"){:target="_blank"}
+Uygulamanın canlı versiyonu: <a href="https://crypto-tracker-web-app1.netlify.app/" target="_blank" title="Crypto Tracker">Live Version</a>
 
 
 ### Klasör Yapısı
