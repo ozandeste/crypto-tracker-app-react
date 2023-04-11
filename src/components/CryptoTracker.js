@@ -27,7 +27,7 @@ const CryptoTracker = () => {
     
     const searchInput = inputRef.current.firstElementChild.firstElementChild;
     searchInput.addEventListener("keyup", (e) => dispatch(searchCrypto(e.target.value))) // when the input changes, it updates the searchCrypto state
-  }, []);
+  }, [dispatch]);
 
 
   return (
